@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.special{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+header{
+    background-color: black;
+    width: 100%;
+    /* height: 200px; */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px 100px;
+}
+.searchBox {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 50px;
+    padding-left: 5px;
+    padding-right: 1px;
+}
+.searchBox:hover > .searchInput {
+    width: 250px;
+    padding: 0 6px;
+}
+.searchBox:hover > .searchButton {
+background: #fff;
+color : #2f3640;
+}
+.searchButton {
+    cursor: pointer;
+    color: white;
+    float: right;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #2f3640;
+    /* background: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    /* font-size: 1.1em; */
+}
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 200px;
+}
+@media screen and (max-width: 620px) {
+    .searchBox:hover > .searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+}
+.logo{
+    color: gray;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+.sch{
+    width: 300px;
+    /* float: left; */
+    /* max-height: 30px; */
+    background-color: whitesmoke;
+    border: none;
+    padding: 7px;
+    border-radius: 12px;
+}
+.photo{
+    width: 150px;
+    height: 50px;
+    opacity: .7;
+    margin-top: 5px;
+}
+.nav{
+    margin-left: 900px;
+}
+.nav i{
+    color: white;
+    font-size: 1.5em;
+}
+.nav a{
+    /* color: white; */
+    display: inline-block;
+    /* justify-content: space-between; */
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-left: 50px;
+    letter-spacing: 3px;
+    opacity: .5;    
+}
+.h:hover , .j:hover , .k:hover{
+    /* font-weight: 500; */
+    /* color: rgb(47, 93, 153); */
+    text-shadow:0px 0px 10px lime,
+    0px 0px 20px lime,
+    0px 0px 40px lime,
+
+    0px 0px 60px lime,
+    0px 0px 100px lime;
+    opacity: 1;
+}
+.special h2{
+    /* margin-bottom: 5px; */
+    position: relative;
+    color: rgb(62, 132, 189);    
+    text-transform: uppercase;
+    margin-left: 20px;
+    /* margin-top: 1px; */
+    font-size: 2.9em;
+    font-weight: bold;
+    -webkit-box-reflect: below -23px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 4));
+    /* opacity: .7; */
+    letter-spacing: 10px;
+}
+.special h2::after{
+    background-color: black;
+    color: white;
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid rgba(211, 211, 211, 0);
+    animation: typing 1.8s steps(5) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+section{
+    /* background-image: url("HipWallpaper.jpg"); */
+    background-color: black;
+    /* background-image: url("Minimalistic Mountains Black Version [1920x1080].png"); */
+    background-size: cover;
+    padding: 100px 200px;
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: black; */
+}
+.top{
+    text-transform: capitalize;
+    color: limegreen;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.left{
+    /* background-image: url("rm251-mind-01-a.jpg"); */
+    background-image: url("Minimalistic Mountains Black and Green Version [2560x1440].png");
+    background-size: cover;
+    padding: 20px;
+    /* top: 30%; */
+    /* left: 33%; */
+    position: relative;
+    /* margin-top: 45px; */
+    /* background-color: darkgray; */
+    display: inline-block;
+    width: 650px;
+    height: 500px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+.left table{
+    color: white;
+    position: absolute;
+    left: 90%;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+    /* border: 10px solid; */
+    /* background-color: red; */
+}
+img{
+    margin-left: 150px;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+i{
+    color: lime;
+    /* font-size: .9em; */
+    /* margin-left: 200px; */
+}
+section div{
+    margin-top: 10px;
+}
+label{
+    font-weight: 600;
+    margin-right: 20px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+input{
+    margin-left: 70px;
+    width: 200px;
+    padding: 5px;
+}
+.un{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.em{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.sel{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-left: 83px;
+    padding: 5px 0px;
+}
+.price{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 5px;
+    margin-left: 145px;
+
+}
+.des{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    /* margin-top: 10px; */
+    width: 200px;
+    margin-left: 225px;
+    padding: 5px;
+}
+.v{
+    position: relative;
+}
+.uniqe{
+    margin-top: 15px;
+    position: absolute;
+}
+.un:hover,.em:hover,.sel:hover,.des:hover{
+    background-color: #2f3640;
+}
+.data{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    width: 90px;
+    margin-left: 200px;
+}
+.data:hover{
+    /* background-color: #2f3640; */
+    /* background-color: darkorchid; */
+    color: limegreen;
+    box-shadow: 0px 0px 40px lime;
+    font-weight: bold;
+
+}
+.whi{
+    margin-left: 80px;
+    width: 200px;
+    border-radius: 10px;
+    /* padding: 10px; */
+    background-color: black;
+    color: limegreen;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.whi2,.whi3, .whi4{
+    /* margin-top: 10px; */
+    margin-left: 225px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: black;
+    color: limegreen;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.del{
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 80px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+
+    border-radius: 10px;   
+}
+.del:hover{
+    /* background-color: darkorchid; */
+    color: darkorchid;
+    font-weight: bold;
+}

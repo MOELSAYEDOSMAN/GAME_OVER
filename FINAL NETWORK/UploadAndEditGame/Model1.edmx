@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AspDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspTaple">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FATORA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_GAME_FATORA" Type="int" />
+          <Property Name="ID_USER_FATORA" Type="int" />
+        </EntityType>
+        <EntityType Name="favort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_FAVORT_GAME" Type="int" />
+          <Property Name="ID_FAVORT_USER" Type="int" />
+        </EntityType>
+        <EntityType Name="GAME">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="int" />
+          <Property Name="description" Type="varchar(max)" />
+          <Property Name="type_game" Type="varchar" MaxLength="50" />
+          <Property Name="time_upload" Type="date" />
+          <Property Name="download_number" Type="int" />
+          <Property Name="img1" Type="varchar(max)" />
+          <Property Name="img2" Type="varchar(max)" />
+          <Property Name="img3" Type="varchar(max)" />
+          <Property Name="img4" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="AspDataModelStoreContainer">
+          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspTaple" EntityType="Self.AspTaple" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FATORA" EntityType="Self.FATORA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="favort" EntityType="Self.favort" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GAME" EntityType="Self.GAME" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AspDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspTaple">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FATORA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_GAME_FATORA" Type="Int32" />
+          <Property Name="ID_USER_FATORA" Type="Int32" />
+        </EntityType>
+        <EntityType Name="favort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_FAVORT_GAME" Type="Int32" />
+          <Property Name="ID_FAVORT_USER" Type="Int32" />
+        </EntityType>
+        <EntityType Name="GAME">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type_game" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="time_upload" Type="DateTime" Precision="0" />
+          <Property Name="download_number" Type="Int32" />
+          <Property Name="img1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="img2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="img3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="img4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="AspDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admins" EntityType="Self.admin" />
+          <EntitySet Name="AspTaples" EntityType="Self.AspTaple" />
+          <EntitySet Name="FATORAs" EntityType="Self.FATORA" />
+          <EntitySet Name="favorts" EntityType="Self.favort" />
+          <EntitySet Name="GAMEs" EntityType="Self.GAME" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AspDataModelStoreContainer" CdmEntityContainer="AspDataEntities">
+          <EntitySetMapping Name="admins">
+            <EntityTypeMapping TypeName="AspDataModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspTaples">
+            <EntityTypeMapping TypeName="AspDataModel.AspTaple">
+              <MappingFragment StoreEntitySet="AspTaple">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FATORAs">
+            <EntityTypeMapping TypeName="AspDataModel.FATORA">
+              <MappingFragment StoreEntitySet="FATORA">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ID_GAME_FATORA" ColumnName="ID_GAME_FATORA" />
+                <ScalarProperty Name="ID_USER_FATORA" ColumnName="ID_USER_FATORA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="favorts">
+            <EntityTypeMapping TypeName="AspDataModel.favort">
+              <MappingFragment StoreEntitySet="favort">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ID_FAVORT_GAME" ColumnName="ID_FAVORT_GAME" />
+                <ScalarProperty Name="ID_FAVORT_USER" ColumnName="ID_FAVORT_USER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GAMEs">
+            <EntityTypeMapping TypeName="AspDataModel.GAME">
+              <MappingFragment StoreEntitySet="GAME">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="type_game" ColumnName="type_game" />
+                <ScalarProperty Name="time_upload" ColumnName="time_upload" />
+                <ScalarProperty Name="download_number" ColumnName="download_number" />
+                <ScalarProperty Name="img1" ColumnName="img1" />
+                <ScalarProperty Name="img2" ColumnName="img2" />
+                <ScalarProperty Name="img3" ColumnName="img3" />
+                <ScalarProperty Name="img4" ColumnName="img4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+header{
+    background-color: black;
+    width: 100%;
+    /* height: 200px; */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px 100px;
+}
+.nav{
+    margin-left: 900px;
+}
+.nav i{
+    color: white;
+    font-size: 1.5em;
+}
+.nav a{
+    /* color: white; */
+    display: inline-block;
+    /* justify-content: space-between; */
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-left: 50px;
+    letter-spacing: 3px;
+    opacity: .5;    
+}
+.k{
+    text-shadow:0px 0px 10px lime,
+    0px 0px 20px lime,
+    0px 0px 40px lime,
+
+    0px 0px 60px lime,
+    0px 0px 100px lime;
+    opacity: 1;
+}
+.h:hover , .j:hover{
+    /* font-weight: 500; */
+    /* color: rgb(47, 93, 153); */
+    text-shadow:0px 0px 10px lime,
+    0px 0px 20px lime,
+    0px 0px 40px lime,
+
+    0px 0px 60px lime,
+    0px 0px 100px lime;
+    opacity: 1;
+}
+section{
+    /* background-image: url("HipWallpaper.jpg"); */
+    background-color: black;
+    /* background-image: url("Minimalistic Mountains Black Version [1920x1080].png"); */
+    background-size: cover;
+    padding: 100px 200px;
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: black; */
+}
+.top{
+    text-transform: capitalize;
+    color: limegreen;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.left{
+    /* background-image: url("rm251-mind-01-a.jpg"); */
+    background-image: url("Minimalistic Mountains Black and Green Version [2560x1440].png");
+    background-size: cover;
+    padding: 20px;
+    /* top: 30%; */
+    /* left: 33%; */
+    position: relative;
+    /* margin-top: 45px; */
+    /* background-color: darkgray; */
+    display: inline-block;
+    width: 650px;
+    height: 500px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+.left table{
+    color: white;
+    position: absolute;
+    left: 18%;
+    padding: 5px;
+    text-align: center;
+    top: 42px;
+    height: 888px;
+    width: 223px;
+}
+section div{
+    margin-top: 10px;
+}
+input{
+    /* margin-left: 100px; */
+    width: 200px;
+    padding: 5px;
+}
+.un{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.em{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+.sel{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    /* margin-left: 112px; */
+    padding: 5px 0px;
+}
+.price{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 5px;
+    /* margin-left: 175px; */
+
+}
+.des{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    /* margin-top: 10px; */
+    width: 200px;
+    /* margin-left: 253px; */
+    padding: 5px;
+}
+.v{
+    position: relative;
+}
+.uniqe{
+    margin-top: 15px;
+    position: absolute;
+}
+.un:hover,.em:hover,.sel:hover,.des:hover{
+    background-color: #2f3640;
+}
+.del{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    width: 90px;
+    margin-left: 200px;
+}
+.del:hover{
+    /* background-color: #2f3640; */
+    /* background-color: darkorchid; */
+    color: limegreen;
+    box-shadow: 0px 0px 40px lime;
+    font-weight: bold;
+
+}
+.whi{
+    /* margin-left: 110px; */
+    width: 200px;
+    border-radius: 10px;
+    /* padding: 10px; */
+    background-color: black;
+    color: limegreen;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.whi2,.whi3, .whi4{
+    /* margin-top: 10px; */
+    /* margin-left: 253px; */
+    width: 200px;
+    border-radius: 10px;
+    background-color: black;
+    color: limegreen;
+    text-transform: capitalize;
+    font-weight: 500;
+}
