@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AspDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspTaple">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FATORA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_GAME_FATORA" Type="int" />
+    <Property Name="ID_USER_FATORA" Type="int" />
+  </EntityType>
+  <EntityType Name="favort">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_FAVORT_GAME" Type="int" />
+    <Property Name="ID_FAVORT_USER" Type="int" />
+  </EntityType>
+  <EntityType Name="GAME">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="type_game" Type="varchar" MaxLength="50" />
+    <Property Name="time_upload" Type="date" />
+    <Property Name="download_number" Type="int" />
+    <Property Name="img1" Type="varchar(max)" />
+    <Property Name="img2" Type="varchar(max)" />
+    <Property Name="img3" Type="varchar(max)" />
+    <Property Name="img4" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="AspDataModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspTaple" EntityType="Self.AspTaple" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FATORA" EntityType="Self.FATORA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="favort" EntityType="Self.favort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAME" EntityType="Self.GAME" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
