@@ -18,7 +18,8 @@ namespace FINAL_NETWORK.UploadAndEditGame
         {
             if (TextBox1 == null && TextBox2.Text == null && TextBox3 == null)
             {
-                TextBox1.Text = "Null";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Null')", true);
             }
             else
             {
@@ -27,10 +28,10 @@ namespace FINAL_NETWORK.UploadAndEditGame
                 {
                     if (FileUpload1.HasFile)
                     {
-                        byte[] imgaq = FileUpload1.FileBytes;
+
                         string fileur = FileUpload1.PostedFile.FileName;
-                        string copfile = "urlimg/" + FileUpload1.FileName;
-                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/urlimg/") + fileur);
+                        string copfile = "UploadAndEditGame/img_gam/" + FileUpload1.FileName;
+                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~UploadAndEditGame/img_gam/") + fileur);
                         ck.price = int.Parse(TextBox2.Text);
                         ck.description = TextBox3.Text;
                         ck.type_game = DropDownList1.SelectedValue;
@@ -41,10 +42,12 @@ namespace FINAL_NETWORK.UploadAndEditGame
                         ck.price = int.Parse(TextBox2.Text);
                         ck.description = TextBox3.Text;
                         ck.type_game = DropDownList1.SelectedValue;
+
                     }
                 }
                 db.SaveChanges();
-                TextBox1.Text = "Done Edit";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Done Edit')", true);
             }
         }
 
@@ -55,10 +58,8 @@ namespace FINAL_NETWORK.UploadAndEditGame
             {
                 db.GAMEs.Remove(ck);
                 db.SaveChanges();
-                TextBox1.Text = "Done";
-                TextBox2.Text = "Done";
-                TextBox3.Text = "Done";
-                DropDownList1.Text = "None";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Done Delet')", true);
+
             }
         }
 
@@ -111,6 +112,7 @@ namespace FINAL_NETWORK.UploadAndEditGame
                 TextBox2.Text = serca.price.ToString();
                 TextBox3.Text = serca.description;
                 DropDownList1.Text = serca.type_game.ToString();
+
             }
             else
             {

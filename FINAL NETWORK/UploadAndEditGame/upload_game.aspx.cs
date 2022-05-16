@@ -14,15 +14,17 @@ namespace FINAL_NETWORK.UploadAndEditGame
         {
             if (TextBox1.Text == null && TextBox2.Text == null && TextBox3.Text == null && FileUpload1 == null && DropDownList1.SelectedValue == "None")
             {
-                Label1.Text = "Error in input";
-                Label1.ForeColor = System.Drawing.Color.Red;
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error in input')", true);
+
             }
             else
             {
                 var ch = db.GAMEs.FirstOrDefault(x => x.name == TextBox1.Text);
                 if (ch != null)
                 {
-                    Label1.Text = "Game Already exit";
+
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Game Already exit')", true);
                 }
                 else
                 {
@@ -31,8 +33,8 @@ namespace FINAL_NETWORK.UploadAndEditGame
                     {
 
                         string fileur = FileUpload1.PostedFile.FileName;
-                        string copfile = "urlimg/" + FileUpload1.FileName;
-                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/urlimg/") + fileur);
+                        string copfile = "img_gam/" + FileUpload1.FileName;
+                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/UploadAndEditGame/img_gam/") + fileur);
 
 
                         GAME gam = new GAME
@@ -47,12 +49,7 @@ namespace FINAL_NETWORK.UploadAndEditGame
                         };
                         db.GAMEs.Add(gam);
                         db.SaveChanges();
-
-                        Label1.Text = copfile;
-                        Label1.ForeColor = System.Drawing.Color.Green;
-
-
-
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Save Game')", true);
                     }
                 }
 

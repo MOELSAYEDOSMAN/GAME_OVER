@@ -56,17 +56,16 @@
     </header>
     <section>
         <h2 class="top">edit game</h2>
-        <form class="left" runat="server">
+        <form class="left" runat="server" style="width: 716px;">
             
-            <div class="table_game" style="position: absolute;height: 315px;width: 288px;right: 60px;">
+            <div class="table_game" style="position: absolute;height: 315px;width:  375px; right: 60px;">
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AspDataConnectionString %>" SelectCommand="SELECT [id], [name], [price], [description], [type_game], [time_upload], [download_number], [img1] FROM [GAME]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
               <asp:TextBox ID="TextBox4" runat="server"  name="name" class="un" placeholder="SERCH GAME" style="margin-left:-17px"></asp:TextBox>
                 <asp:Button ID="Button3" runat="server"  text="serch" class="del" style="margin-left:11px; border:2px solid;" OnClick="Button3_Click"/>
-                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" RepeatColumns="3" ShowFooter="False" CssClass="dalH" OnItemCommand="Item_Command" CellPadding="1" CellSpacing="3">
+                <asp:DataList ID="DataList1" runat="server" DataKeyField="id" DataSourceID="SqlDataSource1" RepeatColumns="4" ShowFooter="False" CssClass="dalH" OnItemCommand="Item_Command" CellPadding="1" CellSpacing="3">
                     <ItemTemplate>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("img1") %>' Height="100px" Width="100px" OnDataBinding="Image1_DataBinding" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("img1") %>' Height="100px" Width="100px" />
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("name") %>' style="display:none;"></asp:Label>
-                        <br/><asp:Button ID="Button4" runat="server" Text="select"  Height="30px" Width="50" />
 <br />
                     </ItemTemplate>
                     <SelectedItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" BorderStyle="None" />
