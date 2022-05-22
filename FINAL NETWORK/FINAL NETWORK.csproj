@@ -92,6 +92,97 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="show_game\assets\css\Home.css" />
+    <Content Include="show_game\assets\css\Login.css" />
+    <Content Include="show_game\assets\css\style.css" />
+    <Content Include="show_game\assets\img\bg-texture-01.jpg" />
+    <Content Include="show_game\assets\img\bg-texture-05.jpg" />
+    <Content Include="show_game\assets\img\game-icon.png" />
+    <Content Include="show_game\assets\img\games developed by SNK I hope even if you have no interest in games.gif" />
+    <Content Include="show_game\assets\img\image.jpg" />
+    <Content Include="show_game\assets\img\JC4_1024x768.jpg" />
+    <Content Include="show_game\assets\img\JC4_1280x1024.jpg" />
+    <Content Include="show_game\assets\img\JC4_1920x1200.jpg" />
+    <Content Include="show_game\assets\img\JC4_3440x1440.jpg" />
+    <Content Include="show_game\assets\img\JC4_3840x2160.jpg" />
+    <Content Include="show_game\assets\img\logo-re.png" />
+    <Content Include="show_game\assets\img\logo-re1.png" />
+    <Content Include="show_game\assets\img\logo-re2.png" />
+    <Content Include="show_game\assets\img\logo-remove2.png" />
+    <Content Include="show_game\assets\img\Logo1-removebg.png" />
+    <Content Include="show_game\assets\img\Logo1.png" />
+    <Content Include="show_game\assets\img\Logo2.png" />
+    <Content Include="show_game\assets\img\Logo3-removebg.png" />
+    <Content Include="show_game\assets\img\Logo4.png" />
+    <Content Include="show_game\assets\img\logo5-removebg.png" />
+    <Content Include="show_game\assets\img\Logo6.png" />
+    <Content Include="show_game\assets\img\Logo7-removebg.png" />
+    <Content Include="show_game\assets\img\Logo7.png" />
+    <Content Include="show_game\assets\img\Logo8.png" />
+    <Content Include="show_game\assets\img\Logo9.png" />
+    <Content Include="show_game\assets\img\movi-icon.png" />
+    <Content Include="show_game\assets\img\necromancers.svg" />
+    <Content Include="show_game\assets\img\p1-game.jpg" />
+    <Content Include="show_game\assets\img\p1-movie.jpg" />
+    <Content Include="show_game\assets\img\p1.jpg" />
+    <Content Include="show_game\assets\img\p10.jpg" />
+    <Content Include="show_game\assets\img\p11.jpg" />
+    <Content Include="show_game\assets\img\p12.jpg" />
+    <Content Include="show_game\assets\img\p13.jpg" />
+    <Content Include="show_game\assets\img\p14.jpg" />
+    <Content Include="show_game\assets\img\p15-remove.png" />
+    <Content Include="show_game\assets\img\p15.jpg" />
+    <Content Include="show_game\assets\img\p19.jpg" />
+    <Content Include="show_game\assets\img\p2.jpg" />
+    <Content Include="show_game\assets\img\p20-remove.png" />
+    <Content Include="show_game\assets\img\p20.jpg" />
+    <Content Include="show_game\assets\img\p21.jpg" />
+    <Content Include="show_game\assets\img\p22.jpg" />
+    <Content Include="show_game\assets\img\p23-remove.png" />
+    <Content Include="show_game\assets\img\p23.jpg" />
+    <Content Include="show_game\assets\img\p24.jpg" />
+    <Content Include="show_game\assets\img\p25.jpg" />
+    <Content Include="show_game\assets\img\p26.jpg" />
+    <Content Include="show_game\assets\img\p27.jpg" />
+    <Content Include="show_game\assets\img\p28-remove.png" />
+    <Content Include="show_game\assets\img\p28.jpg" />
+    <Content Include="show_game\assets\img\p29.jpg" />
+    <Content Include="show_game\assets\img\p3.jpg" />
+    <Content Include="show_game\assets\img\p30.png" />
+    <Content Include="show_game\assets\img\p31.jpg" />
+    <Content Include="show_game\assets\img\p32.jpg" />
+    <Content Include="show_game\assets\img\p33.jpg" />
+    <Content Include="show_game\assets\img\p34.png" />
+    <Content Include="show_game\assets\img\p35-remove.png" />
+    <Content Include="show_game\assets\img\p35.jpg" />
+    <Content Include="show_game\assets\img\p36.jpg" />
+    <Content Include="show_game\assets\img\p37-e.jpg" />
+    <Content Include="show_game\assets\img\p37.jpg" />
+    <Content Include="show_game\assets\img\p38.jpg" />
+    <Content Include="show_game\assets\img\p39.jpg" />
+    <Content Include="show_game\assets\img\p4.jpg" />
+    <Content Include="show_game\assets\img\p40.jpg" />
+    <Content Include="show_game\assets\img\p41.jpg" />
+    <Content Include="show_game\assets\img\p42.jpg" />
+    <Content Include="show_game\assets\img\p43.jpg" />
+    <Content Include="show_game\assets\img\p44.jpg" />
+    <Content Include="show_game\assets\img\p46.jpg" />
+    <Content Include="show_game\assets\img\p47.jpg" />
+    <Content Include="show_game\assets\img\p48.jpg" />
+    <Content Include="show_game\assets\img\p5.jpg" />
+    <Content Include="show_game\assets\img\p50.jpg" />
+    <Content Include="show_game\assets\img\p6.jpg" />
+    <Content Include="show_game\assets\img\p7.jpg" />
+    <Content Include="show_game\assets\img\p8.jpg" />
+    <Content Include="show_game\assets\img\p9.jpg" />
+    <Content Include="show_game\assets\img\page-heading-img-03.jpg" />
+    <Content Include="show_game\assets\img\sword-t.png" />
+    <Content Include="show_game\assets\js\init.js" />
+    <Content Include="show_game\assets\vendor\fontawesome\css\brands.css" />
+    <Content Include="show_game\assets\vendor\jquery\jquery.min.js" />
+    <Content Include="show_game\index.html" />
+    <Content Include="show_game\news.html" />
+    <Content Include="show_game\ShowGAME.aspx" />
     <Content Include="UploadAndEditGame\AD.css" />
     <Content Include="UploadAndEditGame\Edit.aspx" />
     <Content Include="UploadAndEditGame\edit.css" />
@@ -145,6 +236,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="show_game\ShowGAME.aspx.cs">
+      <DependentUpon>ShowGAME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="show_game\ShowGAME.aspx.designer.cs">
+      <DependentUpon>ShowGAME.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UploadAndEditGame\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +267,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="show_game\assets\img\p45.webp" />
+    <Content Include="show_game\assets\img\p49.webp" />
+    <Content Include="show_game\assets\vendor\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="show_game\assets\vendor\fontawesome\webfonts\fa-solid-900.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -179,6 +281,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="img_game\" />
+    <Folder Include="show_game\urlimg\" />
     <Folder Include="UploadAndEditGame\img_gam\" />
   </ItemGroup>
   <ItemGroup>

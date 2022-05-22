@@ -116,7 +116,7 @@ namespace FINAL_NETWORK.UploadAndEditGame
             }
             else
             {
-                TextBox4.Text = "NO";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('NO')", true);
             }
         }
         protected void Page_Load(object sender, EventArgs e)

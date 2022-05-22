@@ -33,8 +33,8 @@ namespace FINAL_NETWORK.UploadAndEditGame
                     {
 
                         string fileur = FileUpload1.PostedFile.FileName;
-                        string copfile = "img_gam/" + FileUpload1.FileName;
-                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/UploadAndEditGame/img_gam/") + fileur);
+                        string copfile = "urlimg/" + FileUpload1.FileName;
+                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/show_game/urlimg/") + fileur);
 
 
                         GAME gam = new GAME

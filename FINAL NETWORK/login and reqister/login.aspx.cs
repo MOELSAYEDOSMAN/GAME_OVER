@@ -39,7 +39,8 @@ namespace FINAL_NETWORK.login_and_reqister
                 if (S != null)
                 {
                     Session["usr"] = S.ID;
-                    //Server.Transfer();
+                    Server.Transfer("~/show_game/ShowGAME.aspx");
+
                 }
                 else
                 {

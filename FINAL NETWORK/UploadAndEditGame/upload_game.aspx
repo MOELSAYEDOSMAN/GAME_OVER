@@ -29,7 +29,7 @@
 <body>  
     <header>
         <div class="nav">
-            <a href="" class="h"><i class="fa-solid fa-house-chimney"></i></a>
+            <a href="https://localhost:44376/show_game/ShowGAME.aspx" class="h"><i class="fa-solid fa-house-chimney"></i></a>
             <a href="" target="-blank" class="j"><i class="fa-solid fa-cloud-arrow-up"></i></a>
             <a href="https://localhost:44376/UploadAndEditGame/Edit.aspx" class="k"><i class="fa-solid fa-gear"></i></a>
         </div>
