@@ -50,11 +50,75 @@
     <Property Name="img3" Type="varchar(max)" />
     <Property Name="img4" Type="varchar(max)" />
   </EntityType>
+  <Association Name="game to game">
+    <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+    <End Role="favort" Type="Self.favort" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAME">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="favort">
+        <PropertyRef Name="ID_FAVORT_GAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gameBYgame">
+    <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+    <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAME">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FATORA">
+        <PropertyRef Name="ID_GAME_FATORA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userFT">
+    <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+    <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspTaple">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FATORA">
+        <PropertyRef Name="ID_USER_FATORA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userID">
+    <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+    <End Role="favort" Type="Self.favort" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspTaple">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="favort">
+        <PropertyRef Name="ID_FAVORT_USER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="AspDataModelStoreContainer">
     <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspTaple" EntityType="Self.AspTaple" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FATORA" EntityType="Self.FATORA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="favort" EntityType="Self.favort" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GAME" EntityType="Self.GAME" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="game to game" Association="Self.game to game">
+      <End Role="GAME" EntitySet="GAME" />
+      <End Role="favort" EntitySet="favort" />
+    </AssociationSet>
+    <AssociationSet Name="gameBYgame" Association="Self.gameBYgame">
+      <End Role="GAME" EntitySet="GAME" />
+      <End Role="FATORA" EntitySet="FATORA" />
+    </AssociationSet>
+    <AssociationSet Name="userFT" Association="Self.userFT">
+      <End Role="AspTaple" EntitySet="AspTaple" />
+      <End Role="FATORA" EntitySet="FATORA" />
+    </AssociationSet>
+    <AssociationSet Name="userID" Association="Self.userID">
+      <End Role="AspTaple" EntitySet="AspTaple" />
+      <End Role="favort" EntitySet="favort" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

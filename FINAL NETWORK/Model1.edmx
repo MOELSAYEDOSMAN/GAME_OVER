@@ -55,12 +55,76 @@
           <Property Name="img3" Type="varchar(max)" />
           <Property Name="img4" Type="varchar(max)" />
         </EntityType>
+        <Association Name="game to game">
+          <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+          <End Role="favort" Type="Self.favort" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="favort">
+              <PropertyRef Name="ID_FAVORT_GAME" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gameBYgame">
+          <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+          <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FATORA">
+              <PropertyRef Name="ID_GAME_FATORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="userFT">
+          <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+          <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspTaple">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FATORA">
+              <PropertyRef Name="ID_USER_FATORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="userID">
+          <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+          <End Role="favort" Type="Self.favort" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspTaple">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="favort">
+              <PropertyRef Name="ID_FAVORT_USER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="AspDataModelStoreContainer">
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspTaple" EntityType="Self.AspTaple" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FATORA" EntityType="Self.FATORA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="favort" EntityType="Self.favort" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GAME" EntityType="Self.GAME" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="game to game" Association="Self.game to game">
+            <End Role="GAME" EntitySet="GAME" />
+            <End Role="favort" EntitySet="favort" />
+          </AssociationSet>
+          <AssociationSet Name="gameBYgame" Association="Self.gameBYgame">
+            <End Role="GAME" EntitySet="GAME" />
+            <End Role="FATORA" EntitySet="FATORA" />
+          </AssociationSet>
+          <AssociationSet Name="userFT" Association="Self.userFT">
+            <End Role="AspTaple" EntitySet="AspTaple" />
+            <End Role="FATORA" EntitySet="FATORA" />
+          </AssociationSet>
+          <AssociationSet Name="userID" Association="Self.userID">
+            <End Role="AspTaple" EntitySet="AspTaple" />
+            <End Role="favort" EntitySet="favort" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -84,6 +148,8 @@
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FATORAs" Relationship="Self.userFT" FromRole="AspTaple" ToRole="FATORA" />
+          <NavigationProperty Name="favorts" Relationship="Self.userID" FromRole="AspTaple" ToRole="favort" />
         </EntityType>
         <EntityType Name="FATORA">
           <Key>
@@ -92,6 +158,8 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_GAME_FATORA" Type="Int32" />
           <Property Name="ID_USER_FATORA" Type="Int32" />
+          <NavigationProperty Name="AspTaple" Relationship="Self.userFT" FromRole="FATORA" ToRole="AspTaple" />
+          <NavigationProperty Name="GAME" Relationship="Self.gameBYgame" FromRole="FATORA" ToRole="GAME" />
         </EntityType>
         <EntityType Name="favort">
           <Key>
@@ -100,6 +168,8 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_FAVORT_GAME" Type="Int32" />
           <Property Name="ID_FAVORT_USER" Type="Int32" />
+          <NavigationProperty Name="AspTaple" Relationship="Self.userID" FromRole="favort" ToRole="AspTaple" />
+          <NavigationProperty Name="GAME" Relationship="Self.game_to_game" FromRole="favort" ToRole="GAME" />
         </EntityType>
         <EntityType Name="GAME">
           <Key>
@@ -116,13 +186,79 @@
           <Property Name="img2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="img3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="img4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FATORAs" Relationship="Self.gameBYgame" FromRole="GAME" ToRole="FATORA" />
+          <NavigationProperty Name="favorts" Relationship="Self.game_to_game" FromRole="GAME" ToRole="favort" />
         </EntityType>
+        <Association Name="userFT">
+          <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+          <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspTaple">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FATORA">
+              <PropertyRef Name="ID_USER_FATORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="userID">
+          <End Role="AspTaple" Type="Self.AspTaple" Multiplicity="0..1" />
+          <End Role="favort" Type="Self.favort" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspTaple">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="favort">
+              <PropertyRef Name="ID_FAVORT_USER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gameBYgame">
+          <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+          <End Role="FATORA" Type="Self.FATORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="FATORA">
+              <PropertyRef Name="ID_GAME_FATORA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="game_to_game">
+          <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
+          <End Role="favort" Type="Self.favort" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GAME">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="favort">
+              <PropertyRef Name="ID_FAVORT_GAME" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="AspDataEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admins" EntityType="Self.admin" />
           <EntitySet Name="AspTaples" EntityType="Self.AspTaple" />
           <EntitySet Name="FATORAs" EntityType="Self.FATORA" />
           <EntitySet Name="favorts" EntityType="Self.favort" />
           <EntitySet Name="GAMEs" EntityType="Self.GAME" />
+          <AssociationSet Name="userFT" Association="Self.userFT">
+            <End Role="AspTaple" EntitySet="AspTaples" />
+            <End Role="FATORA" EntitySet="FATORAs" />
+          </AssociationSet>
+          <AssociationSet Name="userID" Association="Self.userID">
+            <End Role="AspTaple" EntitySet="AspTaples" />
+            <End Role="favort" EntitySet="favorts" />
+          </AssociationSet>
+          <AssociationSet Name="gameBYgame" Association="Self.gameBYgame">
+            <End Role="GAME" EntitySet="GAMEs" />
+            <End Role="FATORA" EntitySet="FATORAs" />
+          </AssociationSet>
+          <AssociationSet Name="game_to_game" Association="Self.game_to_game">
+            <End Role="GAME" EntitySet="GAMEs" />
+            <End Role="favort" EntitySet="favorts" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>

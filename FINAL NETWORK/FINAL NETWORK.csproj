@@ -75,6 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="show_game\Game.css" />
+    <Content Include="show_game\gameName.aspx" />
     <Content Include="login and reqister\Images\p1-game.jpg" />
     <Content Include="login and reqister\Images\p4.jpg" />
     <Content Include="login and reqister\Images\p6.jpg" />
@@ -181,6 +183,7 @@
     <Content Include="show_game\assets\vendor\fontawesome\css\brands.css" />
     <Content Include="show_game\assets\vendor\jquery\jquery.min.js" />
     <Content Include="show_game\index.html" />
+    <Content Include="show_game\MyGame.aspx" />
     <Content Include="show_game\news.html" />
     <Content Include="show_game\ShowGAME.aspx" />
     <Content Include="UploadAndEditGame\AD.css" />
@@ -205,6 +208,13 @@
     </Compile>
     <Compile Include="GAME.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="show_game\gameName.aspx.cs">
+      <DependentUpon>gameName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="show_game\gameName.aspx.designer.cs">
+      <DependentUpon>gameName.aspx</DependentUpon>
     </Compile>
     <Compile Include="login and reqister\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -236,6 +246,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="show_game\MyGame.aspx.cs">
+      <DependentUpon>MyGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="show_game\MyGame.aspx.designer.cs">
+      <DependentUpon>MyGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="show_game\ShowGAME.aspx.cs">
       <DependentUpon>ShowGAME.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

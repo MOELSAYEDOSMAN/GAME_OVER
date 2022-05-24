@@ -14,9 +14,21 @@ namespace FINAL_NETWORK
     
     public partial class AspTaple
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public AspTaple()
+        {
+            this.FATORAs = new HashSet<FATORA>();
+            this.favorts = new HashSet<favort>();
+        }
+    
         public int ID { get; set; }
         public string UserName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FATORA> FATORAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<favort> favorts { get; set; }
     }
 }

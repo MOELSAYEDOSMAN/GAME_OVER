@@ -35,7 +35,7 @@ namespace FINAL_NETWORK.login_and_reqister
             }
             else
             {
-                var S = db.AspTaples.SingleOrDefault(x => x.email == TextBox1.Text && x.password == pass);
+                var S = db.AspTaples.SingleOrDefault(x => x.email == TextBox1.Text && x.password == TextBox2.Text);
                 if (S != null)
                 {
                     Session["usr"] = S.ID;

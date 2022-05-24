@@ -22,7 +22,13 @@ namespace FINAL_NETWORK.show_game
             string ser = ((Label)DataList1.SelectedItem.FindControl("Label1")).Text;
             Session["game name"] = ser;
             TextBox1.Text = ser;
+            Server.Transfer("~/show_game/gameName.aspx");
 
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/show_game/MyGame.aspx");
         }
 
         protected void main_submit_Click(object sender, EventArgs e)
@@ -53,7 +59,5 @@ namespace FINAL_NETWORK.show_game
 
 
         }
-
-
     }
 }

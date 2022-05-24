@@ -4,12 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dab789988f7d4e7f8227103ccda1f389" Name="Diagram1">
-        <EntityTypeShape EntityType="AspDataModel.admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AspDataModel.AspTaple" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AspDataModel.FATORA" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AspDataModel.favort" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AspDataModel.GAME" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="58b6a3dfa1304229a8505258742f39c8" Name="Diagram1">
+        <EntityTypeShape EntityType="AspDataModel.admin" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AspDataModel.AspTaple" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AspDataModel.FATORA" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AspDataModel.favort" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AspDataModel.GAME" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="AspDataModel.userFT" ManuallyRouted="false" />
+        <AssociationConnector Association="AspDataModel.userID" ManuallyRouted="false" />
+        <AssociationConnector Association="AspDataModel.gameBYgame" ManuallyRouted="false" />
+        <AssociationConnector Association="AspDataModel.game_to_game" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

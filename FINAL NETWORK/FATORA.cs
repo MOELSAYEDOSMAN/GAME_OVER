@@ -17,5 +17,8 @@ namespace FINAL_NETWORK
         public int id { get; set; }
         public Nullable<int> ID_GAME_FATORA { get; set; }
         public Nullable<int> ID_USER_FATORA { get; set; }
+    
+        public virtual AspTaple AspTaple { get; set; }
+        public virtual GAME GAME { get; set; }
     }
 }
